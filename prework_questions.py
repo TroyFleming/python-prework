@@ -5,7 +5,7 @@ def hello_name(user_name):
     """Prints message with entered username in uppercase formatting"""
     print('hello_' + user_name.upper())
 
-hello_name()
+hello_name('troy')
 
 
 # Question 2:
@@ -16,7 +16,7 @@ def first_odds():
     for oddNum in range(1, 100, 2):
         print(oddNum)
     
-first_odds()
+print(first_odds())
 
 
 # Question 3:
@@ -27,7 +27,8 @@ def max_num_in_list(a_list):
     maxNum = max(a_list)
     return maxNum
 
-max_num_in_list()
+max_num_in_list([101, 5, 4, 33, 1023, 55])
+max_num_in_list([3, 8, 4 2])
 
 
 # Question 4:
@@ -35,7 +36,7 @@ max_num_in_list()
 # unless it is also divisible by 400. The return should be boolean Type (true/false).
 
 def is_leap_year(a_year):
-    """Determines if entered year can be evenly by 4, as well as 100 and 400, to identify if leap year"""
+    """Determines if entered year can be divided evenly by 4, as well as 100 and 400, to identify if leap year"""
     if (a_year / 4) % 2 == 0:
         return True
     elif (a_year / 100) % 2 == 0 and (a_year / 400) % 2 == 0:
@@ -43,7 +44,8 @@ def is_leap_year(a_year):
     else:
         return False 
 
-is_leap_year()
+print(is_leap_year(2024))
+print(is_leap_year(1933))
 
 
 # Question 5:
@@ -58,4 +60,5 @@ def is_consecutive_list(a_list):
         else:
             return False
     
-is_consecutive_list()
+is_consecutive_list([1, 2, 3, 4, 5, 6])
+is_consecutive_list([4, 5, 8, 9, 10])
