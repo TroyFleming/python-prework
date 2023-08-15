@@ -51,10 +51,10 @@ def is_leap_year(a_year):
 # For example, [2,3,4,5,6,7] are consecutive numbers, but [1,2,4,5] are not consecutive numbers. The return should be boolean Type.
 
 def is_consecutive_list(a_list):
-
+    """Sorts list least to greatest and checks if list includes consecutive numbers"""
     if sorted(a_list) == list(range(min(a_list), max(a_list) + 1)):
         return True
     else:
         return False
         
-print(is_consecutive_list([2, 3, 5, 6, 7]))
+is_consecutive_list()
