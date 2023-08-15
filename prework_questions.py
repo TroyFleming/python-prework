@@ -5,7 +5,7 @@ def hello_name(user_name):
     """Prints message with entered username in uppercase formatting"""
     print('hello_' + user_name.upper())
 
-hello_name('troy')
+hello_name()
 
 
 # Question 2:
@@ -16,7 +16,7 @@ def first_odds():
     for oddNum in range(1, 100, 2):
         print(oddNum)
     
-print(first_odds())
+first_odds()
 
 
 # Question 3:
@@ -27,8 +27,7 @@ def max_num_in_list(a_list):
     maxNum = max(a_list)
     return maxNum
 
-max_num_in_list([101, 5, 4, 33, 1023, 55])
-max_num_in_list([3, 8, 4 2])
+max_num_in_list()
 
 
 # Question 4:
@@ -44,8 +43,7 @@ def is_leap_year(a_year):
     else:
         return False 
 
-print(is_leap_year(2024))
-print(is_leap_year(1933))
+# is_leap_year()
 
 
 # Question 5:
@@ -53,12 +51,10 @@ print(is_leap_year(1933))
 # For example, [2,3,4,5,6,7] are consecutive numbers, but [1,2,4,5] are not consecutive numbers. The return should be boolean Type.
 
 def is_consecutive_list(a_list):
-    """Checks if the next number in list is equal to current number plus one. If so, returns true, otherwise returns false."""
-    for num in a_list:
-        if a_list[num] + 1 == a_list[num + 1]:
-            return True
-        else:
-            return False
-    
-is_consecutive_list([1, 2, 3, 4, 5, 6])
-is_consecutive_list([4, 5, 8, 9, 10])
+
+    if sorted(a_list) == list(range(min(a_list), max(a_list) + 1)):
+        return True
+    else:
+        return False
+        
+print(is_consecutive_list([2, 3, 5, 6, 7]))
